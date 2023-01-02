@@ -5,7 +5,7 @@ local ThemeManager = {} do
 
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
-	        ['Demon Hub Red Version'] = { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"181825","AccentColor":"ff3b3b","BackgroundColor":"16161f","OutlineColor":"323232"}') },
+	    ['Demon Hub Red Version'] = { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"181825","AccentColor":"ff3b3b","BackgroundColor":"16161f","OutlineColor":"323232"}') },
 		['Demon Hub Blue Version'] = { 2, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"87CEFA","BackgroundColor":"141414","OutlineColor":"323232"}') },
 	}
 
