@@ -5,8 +5,8 @@ local ThemeManager = {} do
 
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
-	    ['Demon Hub Red Version'] 	= { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"181825","AccentColor":"ff3b3b","BackgroundColor":"16161f","OutlineColor":"191919"}') },
-		['Default'] 		= { 2, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"0055ff","BackgroundColor":"141414","OutlineColor":"323232"}') },
+	        ['Demon Hub Red Version'] = { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"181825","AccentColor":"ff3b3b","BackgroundColor":"16161f","OutlineColor":"323232"}') },
+		['Demon Hub Blue Version'] 		= { 2, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"87CEFA","BackgroundColor":"141414","OutlineColor":"323232"}') },
 		['Dracula'] 		= { 3, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"232533","AccentColor":"6271a5","BackgroundColor":"1b1c27","OutlineColor":"7c82a7"}') },
 		['Bitch Bot'] 		= { 4, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1e1e1e","AccentColor":"7e48a3","BackgroundColor":"232323","OutlineColor":"141414"}') },
 		['Kiriot Hub'] 		= { 5, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"30333b","AccentColor":"ffaa00","BackgroundColor":"1a1c20","OutlineColor":"141414"}') },
@@ -46,7 +46,7 @@ local ThemeManager = {} do
 	end
 
 	function ThemeManager:LoadDefault()		
-		local theme = 'Demon Hub Red Version'
+		local theme = 'Demon Hub Blue Version''
 		local content = isfile(self.Folder .. '/themes/default.txt') and readfile(self.Folder .. '/themes/default.txt')
 
 		local isDefault = true
