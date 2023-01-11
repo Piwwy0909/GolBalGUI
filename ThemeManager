@@ -7,6 +7,7 @@ local ThemeManager = {} do
 	ThemeManager.BuiltInThemes = {
 		['First'] = { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"181825","AccentColor":"ffffff","BackgroundColor":"16161f","OutlineColor":"323232"}') },
 	    ['Second'] = { 2, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"181825","AccentColor":"FB585C","BackgroundColor":"16161f","OutlineColor":"323232"}') },
+	    ['Third'] = { 3, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1b1b1b","AccentColor":"ffffff","BackgroundColor":"141414","OutlineColor":"323232"}') },
 	}
 
 	function ThemeManager:ApplyTheme(theme)
