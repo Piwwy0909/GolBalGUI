@@ -1,14 +1,14 @@
-local httpService = game:GetService('HttpService')
+
+    local httpService = game:GetService('HttpService')
 local ThemeManager = {} do
 	ThemeManager.Folder = 'LinoriaLibSettings'
 	-- if not isfolder(ThemeManager.Folder) then makefolder(ThemeManager.Folder) end
 
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
-		['First'] = { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"181825","AccentColor":"ffffff","BackgroundColor":"16161f","OutlineColor":"323232"}') },
-	    ['Second'] = { 2, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"181825","AccentColor":"FB585C","BackgroundColor":"16161f","OutlineColor":"323232"}'),
-	    ['Third'] = { 3, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1b1b1b","AccentColor":"ffffff","BackgroundColor":"141414","OutlineColor":"323232"}'),
-	}
+		['Default'] 		= { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"0055ff","BackgroundColor":"141414","OutlineColor":"323232"}') },
+		['1'] = { 2, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1b1b1b","AccentColor":"ffffff","BackgroundColor":"141414","OutlineColor":"323232"}') },
+}	
 
 	function ThemeManager:ApplyTheme(theme)
 		local customThemeData = self:GetCustomTheme(theme)
@@ -42,7 +42,7 @@ local ThemeManager = {} do
 	end
 
 	function ThemeManager:LoadDefault()		
-		local theme = 'Third'
+		local theme = '1'
 		local content = isfile(self.Folder .. '/themes/default.txt') and readfile(self.Folder .. '/themes/default.txt')
 
 		local isDefault = true
