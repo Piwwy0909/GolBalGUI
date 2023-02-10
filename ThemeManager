@@ -17,6 +17,7 @@ local ThemeManager = {} do
 		['Ubuntu'] 			= { 10, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"3e3e3e","AccentColor":"e2581e","BackgroundColor":"323232","OutlineColor":"191919"}') },
 		['Color Gui 1'] 			= { 11, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1b1b1b","AccentColor":"ffffff","BackgroundColor":"141414","OutlineColor":"323232"}') },
 		['Color Gui 2'] 	= { 12, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"191925","AccentColor":"6759b3","BackgroundColor":"16161f","OutlineColor":"323232"}') },
+		['Makima Hub'] 		= { 13, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1e1e1e","AccentColor":"ff004c","BackgroundColor":"232323","OutlineColor":"353535"}') },
 	}
 
 	function ThemeManager:ApplyTheme(theme)
@@ -51,7 +52,7 @@ local ThemeManager = {} do
 	end
 
 	function ThemeManager:LoadDefault()		
-		local theme = 'Color Gui 2'
+		local theme = 'Makima Hub'
 		local content = isfile(self.Folder .. '/themes/default.txt') and readfile(self.Folder .. '/themes/default.txt')
 
 		local isDefault = true
